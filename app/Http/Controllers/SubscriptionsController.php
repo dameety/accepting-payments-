@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Session;
+use Stripe\Charge;
 use Illuminate\Http\Request;
 
 class SubscriptionsController extends Controller
