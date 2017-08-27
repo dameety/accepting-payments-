@@ -29,7 +29,6 @@ class SubscriptionsController extends Controller
             //save other inputs to db
             //do some other stuffs
             return redirect()->route('subscription.success');
-
         } catch (Card $e) {
             $err  = $e->getJsonBody()['error'];
             Session::flash('cardError', $err['message']);
@@ -57,10 +56,10 @@ class SubscriptionsController extends Controller
     {
         $charge = Charge::create(
             array(
-                "amount" => $request->page_price,
-                "source"  => $request->stripe_token,
-                "currency" => "$request->page_currency",
-                "description" => 'Charge for ' . $request->page_name,
+                "amount" => $price,
+              "source"  => $stripe_token,
+              "currency" => "$currency",
+              "description" => 'Charge for Grape shop',
                 'receipt_email' => Auth::user()->email
             )
         );

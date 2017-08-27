@@ -37,7 +37,9 @@
             </div>
 
             <div class="field">
-                <button type="submit" id="pay-button" class="button is-primary is-fullwidth">Pay $100/Month</button>
+                <button type="submit" id="pay-button" class="button is-primary is-fullwidth">
+                    <strong>Pay $100/Month</strong>
+                </button>
             </div>
 
         </form>
