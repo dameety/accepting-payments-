@@ -1,3 +1,4 @@
+@extends('subscriptions.layouts.app')
 @section('content')
 
     <div  id="thank-you" class="column has-text-centered">

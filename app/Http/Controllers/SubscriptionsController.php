@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Session;
 use Stripe\Charge;
+use Stripe\Stripe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SubscriptionsController extends Controller
 {
@@ -23,7 +25,7 @@ class SubscriptionsController extends Controller
     {
         //validate request
         try {
-            Auth::user()->newSubscription('grape-shop')->create($request->stripe_token);
+            Auth::user()->newSubscription('grape shop' ,'grape-shop')->create($request->stripe_token);
             //save other inputs to db
             //do some other stuffs
             return redirect()->route('subscription.success');
