@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
 
 #session-messages {
     font-size: 12px !important;
@@ -44,4 +45,39 @@ hr {
 }
 .error {
   color: #E4584C;
+}
+
+/***********
+SUCCESS PAGE
+*************/
+#thank-you  h1 {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    color: #00D1B2;
+}
+#thank-you > p {
+    font-family: 'Maven Pro', sans-serif;
+    padding-bottom: 20px;
+}
+#thank-you {
+    background-color: #e8e8e8;
+    padding: 0px;
+}
+.big  {
+    font-size: 200px;
+    color: #00D1B2;
+}
+.sub-title {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 40px;
+}
+#message {
+    background-color: #e8e8e8;
+    padding: 0px;
+}
+#message p {
+    font-family: 'Maven Pro', sans-serif;
+    padding: 30px 20px 30px 20px;
+    color: #00D1B2;
 }

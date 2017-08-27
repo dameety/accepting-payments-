@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+@section('content')
 
-    <head>
+    <div  id="thank-you" class="column has-text-centered">
+        <h1 class="title is-3">
+            Thank You
+        </h1>
+        <p>
+            {{ Auth::user()->email }}
+        </p>
+    </div>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Grape-shop Subscription</title>
-        <link rel="stylesheet" href="{{ asset('vendor/swiftpay/css/bulma.css') }}">
-        <link rel="stylesheet" href="{{ asset('vendor/swiftpay/css/checkout.css') }}">
+    <div class="column has-text-centered">
 
-    </head>
+        <i class="fa fa-check-circle-o big"></i>
+        <p class="sub-title">
+            Succesful Payment
+        </p>
 
-    <body class="app">
+    </div>
 
-        <div class="app-body">
+    <div id="message" class="column has-text-centered">
+        <p>
+            You have been successfully charged for this transaction. A receipt for this purchase has been sent to your email.
+        </p>
+    </div>
 
-            <!-- @yield('content') -->
-
-        </div>
-
-        <script src="https://js.stripe.com/v3/"></script>
-        <script src="{{ asset('vendor/swiftpay/js/stripe-config.js') }}"></script>
-    </body>
-
-</html>
+@endsection('content')
